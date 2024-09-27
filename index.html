@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/2a4b915664.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Cafetary</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!--Container-->
+    <div class="container">
+      <nav>
+        <ul class="ylakohta">
+          <h1>Cafetary</h1>
+          <li><a href="#Kotisivu">Koti</a></li>
+          <li><a href="#Menu">Menulista</a></li>
+          <li><a href="#Yhteystiedot">Yhteystiedot</a></li>
+
+          <!-- Kirjautumisikoni -->
+
+          <span>
+            <i class="fas fa-sign-in-alt sign"></i>
+          </span>
+
+          <div class="search-container">
+            <form action="/search" method="GET">
+                <input type="text" placeholder="Hae täältä..." name="search" class="search-input" required />
+                <button type="submit" class="search-btn">Haku</button>
+            </form>
+        </ul>
+      </nav>
+
+      <!-- Responssiivinen Hero-banneri -->
+      <section>
+        <header class="hero">
+          <div id="corner-text">
+            <p>
+              Mitä tänään leivottaisiin?
+              Tutustu Bakeryn herkullisiin leipomotuotteisiin ja löydä suosikkisi suoraan tuoreena uunista!
+              <span class="lausahdus">TERVETULOA!</span>
+            </p>
+          </div>
+        </header>
+      </section>
+
+      <div class="nappi-container">
+        <button class=" nappi coffee-nappi">Kahvi</button>
+        <button class="nappi  tea-nappi">Tee</button>
+        <button class="nappi pastry-nappi">Leivonnainen</button>
+        <button class="nappi  special-menu-nappi">Erikoismenu</button>
+    </div>
+      
+
+      <!-- Dialogi-ikkuna kirjautumista varten -->
+      <dialog id="loginDialog">
+        <h2>Kirjaudu sisään</h2>
+        <form class="login-form" method="dialog">
+          <div class="input-group">
+            <label for="username">Käyttäjätunnus</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-group">
+            <label for="password">Salasana</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Kirjaudu sisään</button>
+          <button type="button" id="closeDialog">Peruuta</button>
+        </form>
+      </dialog>
+
+
+      <article id="Menulista">
+        <div class="grid-container">
+          <div class="Valinnat">
+            <h1>Kahvit</h1>
+            <ul>
+              <li>Latte - 3,90 €</li>
+              <li>Cappuccino - 4,50 €</li>
+              <li>Espresso - 2,90 €</li>
+              <li>Matcha Latte - 5,50 €</li>
+          </ul>
+          </div>
+          <div class="Valinnat">
+            <h1>Teet</h1>
+            <ul>
+              <li>Vihreä tee - 2,50 €</li>
+              <li>Mustatee - 2,50 €</li>
+              <li>Chai tee - 4,00 €</li>
+              <li>Kamomilla tee- 5,50 €</li>
+              <li>Berry tee - 3,00 €</li>
+          </ul>
+          </div>
+          
+          <div class="Valinnat">
+            <h1>Leivonnainen</h1>
+            <ul>
+              <li>Korvapuusti - 3,00 €</li>
+              <li>Kanelipulla - 2,80 €</li>
+              <li>Suklaakakku - 4,50 €</li>
+              <li>Mustikkapiirakka - 3,90 €</li>
+              <li>Juustokakku - 5,00 €</li>
+          </ul>
+          </div>
+
+          <div class="Valinnat">
+            <h1>Erikoiset</h1>
+          </ul>
+            <li>Gluteeniton Kakku - 5,50 €</li>
+            <li>Vegan Brownie - 4,00 €</li>
+            <li>Protein Cookie - 3,50 €</li>
+            <li>Matcha-kakku - 6,00 €</li>
+            <li>Erikoislatte - 4,50 €</li>
+          </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Main Content -->
+      <main>
+
+        <section>
+          <div id="mini1">
+            <img src="img1/bakery2.jpg" alt="Cafetary" style="width: 100%" />
+          </div>
+          <img
+            class="f-left"
+            src="img1/bakery.jpg"
+            alt="Kuva"
+            width="150"
+            height="150"
+          />
+
+          <h2 id="h2">Lisää meistä</h2>
+          <h3 id="h3">Meidän tarinamme</h3>
+          <p class="teksti">
+            Tervetuloa Bakeryyn! Meidän kahvilassamme kaikki leivotaan käsin rakkaudella ja tuoreista raaka-aineista. Jokainen herkku syntyy perinteiden ja intohimon yhdistelmänä – haluamme tarjota hetken, jossa arki pysähtyy ja herkullinen makuelämys alkaa.
+            Meidän intohimomme on tehdä jokaisesta hetkestä erityinen. Bakeryssa perinteet ja uudet maut kohtaavat, ja toivotamme sinulle aina hyvää ruokahalua!
+            <span id="lause">Tervetuloa!</span>
+          </p>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+          <p>Copyright, WE</p>
+      </footer>
+    </div>
+  </body>
+</html>
