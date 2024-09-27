@@ -1,0 +1,469 @@
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  src: url(../fonts/Mulish-Italic-VariableFont_wght.ttf) format("ttf");
+}
+
+:root {
+  --primary-bg-color: #f5f5dc; /* Beige */
+  --secondary-bg-color: #fffaf0; /* Valkoinen */
+  --accent-color: #8b4513; /* SaddleBrown */
+  --text-color: #4b2e0e; /* Tummanruskea */
+  --header-bg-color: #d2b48c; /* Tan (vaaleanruskea) */
+  --link-color: #ffffff; /* Valkoinen */
+  --link-hover-color: #3e272; /* Tan */
+  --link-active-color: #8b4513; /* SaddleBrown */
+  --footer-bg-color: #3e2723; /* Tummanruskea */
+  --border-color: #deb887; /* Burlywood */
+  --dialog-bg-color: #f5f5dc; /* Beige */
+  --backdrop-gradient: linear-gradient(
+    45deg,
+    #fffaf0,
+    /* Valkoinen */ #f5f5dc,
+    /* Beige */ #deb887,
+    /* Burlywood */ #8b4513 /* SaddleBrown */
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body:has(dialog[open]) {
+  overflow-y: hidden;
+}
+
+h1 {
+  color: #8b4513; /* Säilytetään tumma ruskea väri */
+  padding: 1rem;
+  text-align: left;
+  border: 2px solid #d2b48c; /* Vaalean ruskea reunus */
+  background-color: #f5f5dc; /* Beige taustaväri */
+  box-shadow: 0 4px 8px #8b4513; /* Pehmeä varjo */
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  margin-block: 0;
+}
+
+h1:hover {
+  background-color: #e0e0c1; /* Hieman tummempi beige hover-tilassa */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Syvempi varjo hover-tilassa */
+  transform: translateY(-2px); /* Nostaa otsikkoa hieman hover-tilassa */
+}
+
+nav.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 20px;
+  border: 1px solid beige;
+  color: #3e2723;
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 5px 5px 10px brown;
+  transition: box-shadow 0.3s ease;
+}
+
+.clear {
+  clear: both;
+}
+
+.img1 {
+  float: left;
+  margin: 0;
+}
+
+main {
+  padding: 10px;
+  max-width: 700px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: 40px;
+  background-image: url("img1/estetiikka1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+#h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: bottom;
+  margin-bottom: 2px;
+  font-family: "Georgia", serif;
+  letter-spacing: 2px;
+  text-transform: unset;
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 5px;
+}
+
+#h3 {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  text-align: left;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 8px;
+  text-transform: capitalize;
+  font-style: italic;
+}
+.hero {
+  margin: auto;
+  height: 60vh;
+  min-height: 300px;
+  max-height: 500px;
+  width: 90%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: flex;
+  background: url(img1/kahvi.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  max-width: 1000px;
+  text-align: right;
+  
+}
+#corner-text {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 30%;
+  height: 200px;
+  /* background-color: palegoldenrod; */
+  position: absolute;
+  top: 8%;
+  bottom: 10px; /* Etäisyys alareunasta */
+  font-size: 20px; /* Voit muuttaa fontin kokoa */
+  color: whitesmoke; /* Tummanruskea teksti */
+  transform: translateX(10%);
+  right: 100px;
+  margin: 5px 0;
+  word-spacing: 5px;
+}
+
+.lausahdus {
+  font-family: "Arial", sans-serif;
+  font-size: 1em;
+}
+
+#teksti {
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text-color);
+  text-align: justify;
+  margin: 0 20px 30px 20px; /* Teksti sisennetty 20px joka puolelta */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-indent: 10px;
+}
+
+#lause {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  margin-top: 20px;
+  text-align: right;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  background-color: #3e2723;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  height: 60px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  justify-content: flex-start;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #ffffff; /* Valkoinen teksti */
+  font-weight: bold;
+  padding: 14px 20px;
+  border-radius: 4px;
+  margin: 8px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: beige; /* Korosta hover-tilassa */
+  color: #8b4513;
+}
+
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Kirjautumisikoni */
+.sign {
+  font-size: 1.5em; /* Ikonin koko */
+  cursor: pointer;
+  color: #8b4513; /* SaddleBrown */
+  padding: 5px 10px;
+  border-radius: 50%; /* Pyöristetyt reunat */
+  background-color: #f5f5dc; /* Beige tausta ikonin ympärille */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Sujuva siirtymä väreille */
+}
+
+.sign:hover {
+  background-color: #8b4513;
+  color: white;
+}
+
+/* Hakulomake*/
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid #deb887; /* Burlywood */
+  border-radius: 5px 0 0 5px; /* Pyöristetyt reunat vasemmalla */
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #723e18; /* Tumma ruskea fokuksessa */
+}
+
+/* Hakupainike */
+.search-btn {
+  padding: 10px 20px;
+  background-color: #583217; /* Tumma ruskea */
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0; /* Pyöristetyt reunat oikealla */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover-efekti hakupainikkeelle */
+.search-btn:hover {
+  background-color: #d2b48c; /* Tan hover-tilassa */
+}
+
+/*BTN Container */
+
+.nappi-container {
+  padding: 9px 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-nappi {
+  border-bottom: 4px solid #4b2e0e;
+  width: 100px;
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: #ffffff;
+  border: 3px solid var(--red);
+  border-radius: 8px;
+  transition-duration: 0.3s;
+}
+.nappi:hover {
+  color: var(--light);
+  background-color: var(--red);
+}
+
+/*grid*/
+
+.grid-container {
+  /* border: #1d1d1d 2px solid; */
+  padding: 10px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.Valinnat {
+  padding: 10px;
+  /* border: 2px solid red; */
+  box-shadow: 0 0 20px 10px #ab845a;
+  transition: 0.5s;
+}
+.Valinnat h1 {
+  font-size: 1.6em;
+}
+.Valinnat li {
+  margin: 5px 0;
+  font-size: 1.2em;
+  color: #1d1d1d;
+}
+
+#mini1 {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: -60px;
+  left: 500px;
+  background-position: center;
+}
+
+.f-left {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+#spani {
+  color: var(--text-color);
+  font-size: 23px;
+  position: fixed;
+}
+
+/* Alatunniste */
+.footer {
+  padding-top: 10px;
+  background-color: rgb(197, 172, 140);
+  color: white;
+  text-align: center; /* Voit kasvattaa paddingia lisätäksesi tilaa yläpuolelle */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px; /* Lisää ylimääräinen tila yläpuolelle */
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 16px 48px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background: linear-gradient(145deg, #f5f5dc, #e0e0c1);
+}
+
+/* Kirjautumislomakkeen tyylit */
+.login-form {
+  background-color: var(--secondary-bg-color);
+}
+/* Responsiivinen suunnittelu kirjautumisikonille */
+@media (max-width: 768px) {
+  .sign {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  #mini1 {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #text-box {
+    left: 50px;
+  }
+  #text-box h1 {
+    font-size: 2.5em;
+  }
+  #text-box p {
+    font-size: 1.1em;
+  }
+  .lausahdus {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    min-width: 300px;
+  }
+  nav.container,
+  header,
+  . {
+    width: 90%;
+  }
+  .hero {
+    height: 70px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  dialog {
+    height: fit-content;
+    min-width: 310px;
+  }
+  dialog > p {
+    font-size: 3em;
+  }
+}
+
+
+}
+
+@media only screen and (max-width: 850px) {
+  .container {
+    flex-direction: column;
+  }
+
+  /*#text-box {
+    display: none;
+  }*/
+  .sign {
+    margin: 0;
+    text-align: center;
+  }
+  .sign:hover {
+    transition: none;
+  }
+  .search-btn,
+  .search-btn:hover,
+  .search-container {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 5vw;
+    border: none;
+    background-color: var(--black);
+    font-size: 1.5rem;
+  }
+}
